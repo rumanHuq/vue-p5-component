@@ -32,7 +32,8 @@ new Vue({
 ### NPM
 
 ```bash
-npm install --save vue vue-p5@0.7.x
+npm install --save vue vue-p5-component@latest
+yarn add vue vue-p5-component@latest
 ```
 
 ```javascript
@@ -46,8 +47,8 @@ export default {
       sketch.text('Hello p5!', 20, 20);
     }
   },
-  render(h) { 
-    return h(VueP5, {on: this}); 
+  render(h) {
+    return h(VueP5, {on: this});
   }
 };
 ```
