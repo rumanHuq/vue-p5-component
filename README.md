@@ -4,10 +4,9 @@
 
 Create [p5.js](https://p5js.org/) instance as a [Vue](https://vuejs.org/) component.
 
-
 ## Quick start
 
-### Script
+<!-- ### Script
 
 ```html
 <script src="https://unpkg.com/vue"></script>
@@ -28,7 +27,7 @@ new Vue({
   }
 });
 </script>
-```
+``` -->
 
 ### NPM
 
