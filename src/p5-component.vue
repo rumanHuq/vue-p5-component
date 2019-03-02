@@ -2,11 +2,15 @@
   <div/>
 </template>
 
-<script>
+<script lang="ts">
 import p5 from "p5";
+import Vue, { VueConstructor } from 'vue';
 
-export default {
-  name: "VueP5",
+export default Vue.extend({
+  methods: {
+    hello(){
+    }
+  },
   mounted() {
     const event_names = {
       preload: "preload",
@@ -38,10 +42,10 @@ export default {
       this.$emit("sketch", sketch);
 
       for (let p5EventName in event_names) {
-        const vueEventName = event_names[p5EventName];
+        const vueEventName = (event_names as any)[p5EventName];
         const savedCallback = sketch[p5EventName];
 
-        sketch[p5EventName] = (...args) => {
+        sketch[p5EventName] = (...args: any[]) => {
           if (savedCallback) {
             savedCallback(sketch, ...args);
           }
@@ -50,5 +54,5 @@ export default {
       }
     }, this.$el);
   }
-};
+})
 </script>

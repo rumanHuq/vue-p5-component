@@ -2,6 +2,7 @@ import merge from 'webpack-merge';
 import {resolve} from "path";
 import { VueLoaderPlugin } from "vue-loader";
 import {Configuration} from "webpack";
+import CopyPlugin from "copy-webpack-plugin";
 
 const config:Configuration = {
   mode: "production",
@@ -31,6 +32,9 @@ const config:Configuration = {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new CopyPlugin([
+      { from: 'src/index.d.ts', to: 'index.d.ts', toType: 'file',},
+    ]),
   ]
 };
 
