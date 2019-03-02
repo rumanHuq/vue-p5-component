@@ -13,7 +13,7 @@ declare module "vue-p5-component" {
 
   export interface Idraw {
     tint: (RED: number, GREEN: number, BLUE: number) => any;
-    image: (createCaptureInstance: createCaptureInstance, Xcord: number, Ycord: number) => any;
+    image: (createCaptureInstance: createCaptureInstance, Xcord: number, Ycord: number, width: number, height: number) => any;
   }
 
   export type captureDevice = "video";
