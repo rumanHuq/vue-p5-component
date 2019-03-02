@@ -11,5 +11,7 @@ declare module "vue-p5-component" {
 interface Isetup {
   createCanvas: (width: number, height: number)=>any;
   background: (color: number)=>any;
-  createCapture: (VIDEO: any)=>any
+  createCapture: (captureDevice: "video")=>({
+    size: (width: number, height: number)=>any;
+  })
 }
