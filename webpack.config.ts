@@ -33,7 +33,7 @@ const config:Configuration = {
   plugins: [
     new VueLoaderPlugin(),
     new CopyPlugin([
-      { from: 'src/index.d.ts', to: 'index.d.ts', toType: 'file',},
+      { from: 'src/index.d.ts', to: 'sfc.d.ts', toType: 'file',},
     ]),
   ]
 };
