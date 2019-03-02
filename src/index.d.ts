@@ -1,15 +1,14 @@
 // @ts-ignore
 import Vue from "vue";
-
 declare module "vue-p5-component" {
-
+  export interface createCaptureReturns {
+    size: (width: number, height: number) => any;
+    hide: () => void;
+  }
   export interface Isetup {
     createCanvas: (width: number, height: number) => any;
     background: (color: number) => any;
-    createCapture: (captureDevice: captureDevice) => {
-      size: (width: number, height: number) => any;
-      hide: () => void;
-    }
+    createCapture: (captureDevice: captureDevice) => createCaptureReturns;
   }
 
   export interface Idraw {
