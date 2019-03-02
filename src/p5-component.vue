@@ -4,8 +4,8 @@
 
 <script lang="ts">
 import P5 from "p5";
-import "p5/lib/addons/p5.dom";
-import "p5/lib/addons/p5.sound";
+import "p5/lib/addons/p5.dom.min";
+import "p5/lib/addons/p5.sound.min";
 /* eslint-disable import/no-extraneous-dependencies */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Vue, { VueConstructor } from "vue";

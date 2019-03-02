@@ -51,11 +51,11 @@
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1"
   },
+  "dependencies": {
+    "p5": "^0.7.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rumanbsl/vue-p5-component"
-  },
-  "dependencies": {
-    "p5": "https://github.com/processing/p5.js.git"
   }
 }
