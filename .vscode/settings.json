@@ -1,0 +1,71 @@
+{
+  "eslint.packageManager": "yarn",
+  "tslint.enable": true,
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "tslint.autoFixOnSave": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      // to higlight linting errors
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    }
+  ],
+  "tslint.jsEnable": true,
+  // "files.exclude": {
+  //   "**/.git": true,
+  //   "**/.svn": true,
+  //   "**/.hg": true,
+  //   "**/CVS": true,
+  //   "**/.DS_Store": true,
+  //   "*.lock": true,
+  //   "*tsconfig*": true,
+  //   "*webpack*": true,
+  //   "*lint*": true,
+  //   ".editorconfig": true,
+  //   "LICENSE": true,
+  //   ".babelrc": true,
+  //   ".vscode": true
+  // },
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.ts": "none",
+  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.defaultFormatter.html": "none",
+  "emmet.includeLanguages": {
+    "vue": "html",
+    "vue-html": "html",
+    "javascript": "javascriptreact",
+    "xml": {
+      "attr_quotes": "single"
+    }
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "sassFormat.indent": 2,
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false,
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
+}

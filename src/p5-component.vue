@@ -1,14 +1,16 @@
 <template>
-  <div/>
+  <div />
 </template>
 
 <script lang="ts">
-import p5 from "p5";
-import Vue, { VueConstructor } from 'vue';
+import P5 from "p5";
+/* eslint-disable import/no-extraneous-dependencies */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import Vue, { VueConstructor } from "vue";
 
 export default Vue.extend({
   mounted() {
-    const event_names = {
+    const eventNames = {
       preload: "preload",
       setup: "setup",
       draw: "draw",
@@ -34,11 +36,11 @@ export default Vue.extend({
       deviceShaken: "deviceshaken",
     };
 
-    new p5(sketch => {
+    const P5Instance = new P5(sketch => {
       this.$emit("sketch", sketch);
 
-      for (let p5EventName in event_names) {
-        const vueEventName = (event_names as any)[p5EventName];
+      Object.keys(eventNames).forEach(p5EventName=>{
+        const vueEventName = (eventNames as any)[p5EventName];
         const savedCallback = sketch[p5EventName];
 
         sketch[p5EventName] = (...args: any[]) => {
@@ -47,8 +49,10 @@ export default Vue.extend({
           }
           this.$emit(vueEventName, sketch, ...args);
         };
-      }
+      });
     }, this.$el);
-  }
-})
+
+    return P5Instance;
+  },
+});
 </script>

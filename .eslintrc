@@ -1,0 +1,150 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "import",
+    "vue",
+    "@typescript-eslint"
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [
+      ".vue"
+    ],
+    "ecmaFeatures": {
+      "jsx": true,
+      "useJSXTextNode": true,
+      "classes": true
+    },
+    "sourceType": "module"
+  },
+  "root": true,
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-base",
+    "plugin:vue/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "settings": {
+    "html/indent": "+2",
+    "import/resolver": {
+      "node": true,
+      "eslint-import-resolver-typescript": true,
+      "webpack": {
+        "config": {
+          "resolve": {
+            "extensions": [
+              ".vue",
+              ".ts",
+              ".js",
+              ".yml"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 160
+      }
+    ],
+    "no-multi-spaces": 2,
+    "camelcase": 0,
+    "no-param-reassign": 0,
+    "no-underscore-dangle": 0,
+    "no-unused-vars": 0,
+    "import/no-named-as-default": 0,
+    "import/no-unresolved": 0,
+    "prettier/prettier": {
+      "trailingComma": "all",
+      "printWidth": 160
+    },
+    "comma-dangle": 2,
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ],
+    "vue/max-attributes-per-line": [
+      "error",
+      {
+        "singleline": 4,
+        "multiline": {
+          "max": 1,
+          "allowFirstLine": false
+        }
+      }
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0
+      }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true
+      }
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "no-console": "warn",
+    "semi": "error",
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "space-before-blocks": [
+      "error",
+      {
+        "functions": "always",
+        "keywords": "always",
+        "classes": "never"
+      }
+    ],
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true,
+          "FunctionExpression": false
+        }
+      }
+    ],
+    "@typescript-eslint/interface-name-prefix": "error",
+    "@typescript-eslint/no-object-literal-type-assertion": "off"
+  }
+}
