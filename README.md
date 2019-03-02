@@ -1,4 +1,6 @@
-# vue-p5
+# Vue-P5-Component (P5 wrapper is taken from [Kinrany/vue-p5](https://github.com/Kinrany/vue-p5))
+
+## This Readme is also taken from taken from [Kinrany/vue-p5](https://github.com/Kinrany/vue-p5). Only typescript usage instruction is added
 
 Create [p5.js](https://p5js.org/) instance as a [Vue](https://vuejs.org/) component.
 
@@ -9,7 +11,7 @@ Create [p5.js](https://p5js.org/) instance as a [Vue](https://vuejs.org/) compon
 
 ```html
 <script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/vue-p5@0.7.x"></script>
+<script src="https://unpkg.com/vue-p5-component@1.0.0"></script>
 
 <div id="app">
   <vue-p5 v-on="this"></vue-p5>
