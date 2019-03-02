@@ -13,7 +13,7 @@ declare module "vue-p5-component" {
 
   export interface Idraw {
     tint: (RED: number, GREEN: number, BLUE: number) => any;
-    image: (createCaptureInstance: createCaptureInstance, Xcord: number, Ycord: number, width: number, height: number) => any;
+    image: (createCaptureInstance: createCaptureInstance, ...args: Container[]) => any;
     mouseX: number;
     height: number;
   }
@@ -24,4 +24,8 @@ declare module "vue-p5-component" {
     setup: (sketch: Isetup) => any;
     draw?: (sketch: any) => any;
   }
+}
+
+interface Container {
+  Xcord: number; Ycord: number; width: number; height: number;
 }
