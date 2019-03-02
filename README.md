@@ -149,6 +149,10 @@ new Vue({
 </script>
 ```
 
+Remember to use arrow functions if you need `this`.
+
+`@sketch` can be used in parallel with other events. Functions defined in the `@sketch` handler will always be called first.
+
 ### Importing type definitions (WIP)
 
 ```html
@@ -176,26 +180,6 @@ export default Vue.extend({
 </script>
 
 ```
-
-Remember to use arrow functions if you need `this`.
-
-`@sketch` can be used in parallel with other events. Functions defined in the `@sketch` handler will always be called first.
-
-## Examples
-
-Hello world: [codepen](https://codepen.io/Kinrany/pen/oPqEbQ)
-
-Webpack project: [vue-p5-example](https://github.com/Kinrany/vue-p5-example/)
-
-A game of Snake: [vue-p5-snake](https://github.com/Kinrany/vue-p5-snake/)
-
-## FAQ
-
-None yet. Feel free to open a new [issue](https://github.com/Kinrany/vue-p5/issues) if you have a question or a feature request!
-
-## Versioning
-
-This project adheres to [semver](https://semver.org/). Minor changes are breaking.
 
 ## License
 
