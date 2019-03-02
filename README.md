@@ -199,4 +199,4 @@ This project adheres to [semver](https://semver.org/). Minor changes are breakin
 
 ## License
 
-LGPL-2.1
+MIT
