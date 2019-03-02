@@ -4,7 +4,7 @@ import component from './p5-component.vue';
 function install(Vue: any) {
   if ((install as any).installed) return;
   (install as any).installed = true;
-  Vue.component('P5Component', component);
+  Vue.component('VueP5Component', component);
 }
 
 // Create module definition for Vue.use()

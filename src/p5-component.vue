@@ -7,10 +7,6 @@ import p5 from "p5";
 import Vue, { VueConstructor } from 'vue';
 
 export default Vue.extend({
-  methods: {
-    hello(){
-    }
-  },
   mounted() {
     const event_names = {
       preload: "preload",
