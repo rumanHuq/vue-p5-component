@@ -8,7 +8,7 @@
   "version": "1.0.0",
   "main": "dist/vue-p5-component.js",
   "license": "MIT",
-  "types": "dist/index.d.ts",
+  "types": "dist/typescript-definitions/index.d.ts",
   "scripts": {
     "build": "yarn rimraf dist && cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
     "push": "yarn build && git add . && git commit -m '++' && git push"

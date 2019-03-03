@@ -1,7 +1,8 @@
-import merge from 'webpack-merge';
-import {resolve} from "path";
+/* eslint-disable import/no-extraneous-dependencies */
+import merge from "webpack-merge";
+import { resolve } from "path";
 import { VueLoaderPlugin } from "vue-loader";
-import {Configuration} from "webpack";
+import { Configuration } from "webpack";
 import CopyPlugin from "copy-webpack-plugin";
 
 const config:Configuration = {
@@ -22,39 +23,36 @@ const config:Configuration = {
         use: [
           "style-loader",
           "css-loader",
-          "sass-loader"
-        ]
+          "sass-loader",
+        ],
       },
-    ]
+    ],
   },
-  externals: {
-    p5: 'p5'
-  },
+  externals: { p5: "p5" },
   plugins: [
     new VueLoaderPlugin(),
     new CopyPlugin([
-      { from: 'src/index.d.ts', to: 'index.d.ts', toType: 'file',},
+      { from: "src/typescript-definitions", to: "typescript-definitions/", toType: "dir" },
     ]),
-  ]
+  ],
 };
-
 
 export default [
   merge(config, {
-    entry: resolve(__dirname + '/src/entry.ts'),
+    entry: resolve(`${__dirname }/src/entry.ts`),
     output: {
-      filename: 'vue-p5-component.min.js',
-      libraryTarget: 'window',
-      library: 'VueP5Component',
-    }
+      filename: "vue-p5-component.min.js",
+      libraryTarget: "window",
+      library: "VueP5Component",
+    },
   }),
   merge(config, {
-    entry: resolve(__dirname + '/src/p5-component.vue'),
+    entry: resolve(`${__dirname }/src/p5-component.vue`),
     output: {
-      filename: 'vue-p5-component.js',
-      libraryTarget: 'umd',
-      library: 'vue-p5-component',
-      umdNamedDefine: true
-    }
-  })
+      filename: "vue-p5-component.js",
+      libraryTarget: "umd",
+      library: "vue-p5-component",
+      umdNamedDefine: true,
+    },
+  }),
 ];
