@@ -32,7 +32,7 @@ const config:Configuration = {
   plugins: [
     new VueLoaderPlugin(),
     new CopyPlugin([
-      { from: "src/typescript-definitions", to: "typescript-definitions/", toType: "dir" },
+      { from: "src/index.d.ts", to: "", toType: "file" },
     ]),
   ],
 };

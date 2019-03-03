@@ -32,8 +32,8 @@ new Vue({
 ### NPM
 
 ```bash
-npm install --save vue vue-p5-component@latest
-yarn add vue vue-p5-component@latest
+npm install --save vue vue-p5-component@latest & npm install @types/p5 -D;
+yarn add vue vue-p5-component@latest & yarn add @types/p5 -D
 ```
 
 ```javascript

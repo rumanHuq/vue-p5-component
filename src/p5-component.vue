@@ -3,11 +3,12 @@
 </template>
 
 <script lang="ts">
+/* eslint-disable import/no-extraneous-dependencies */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 import P5 from "p5";
 import "p5/lib/addons/p5.dom.min";
 import "p5/lib/addons/p5.sound.min";
-/* eslint-disable import/no-extraneous-dependencies */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Vue, { VueConstructor } from "vue";
 
 export default Vue.extend({
@@ -52,7 +53,7 @@ export default Vue.extend({
           this.$emit(vueEventName, sketch, ...args);
         };
       });
-    }, this.$el);
+    }, (this.$el as any));
 
     return P5Instance;
   },
