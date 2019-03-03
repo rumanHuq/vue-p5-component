@@ -32,8 +32,8 @@ new Vue({
 ### NPM
 
 ```bash
-npm install --save vue vue-p5-component@latest & npm install @types/p5 -D;
-yarn add vue vue-p5-component@latest & yarn add @types/p5 -D
+npm install --save vue vue-p5-component@latest
+yarn add vue vue-p5-component@latest
 ```
 
 ```javascript
@@ -154,31 +154,46 @@ Remember to use arrow functions if you need `this`.
 `@sketch` can be used in parallel with other events. Functions defined in the `@sketch` handler will always be called first.
 
 ### Importing type definitions (WIP)
+type defintions are just [@types/p5](https://www.npmjs.com/package/@types/p5) alias.
 
+NOTE:
+  - All the types are prefixed with `P5`(see below)
+  
+  - `P5Sketch` is `p5InstanceExtensions` alias, which is both renamed and prefixed, All the other types are prefixed Only
+  
 ```html
 <template>
-  <P5 @setup="setup" @draw="draw" />
+  <P5 v-on="{setup, draw}" />
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import P5, { Ip5 } from "vue-p5-component";
+import P5,
+{ P5Element, P5Sketch } from "vue-p5-component";
 
 export default Vue.extend({
   components: { P5 },
+  data() {
+    return { video: undefined } as { video: undefined | P5Element };
+  },
   methods: {
-    setup(sketch) {
-      sketch.createCanvas(400, 100);
-      sketch.background(100);
+    setup(sketch: P5Sketch) {
+      sketch.createCanvas(400, 400);
+      sketch.background(50);
 
+      this.video = sketch.createCapture(sketch.VIDEO);
+      if(this.video) {
+        this.video.size(400, 400);
+        this.video.hide();
+      }
     },
-    draw(a) {
-      console.log(a);
+    draw(sketch: P5Sketch) {
+      sketch.tint(255, 0, 100);
+      if(this.video !== undefined) sketch.image(this.video, 0, 0, sketch.mouseX || 400, sketch.height || 400);
     },
-  } as Ip5,
+  },
 });
 </script>
-
 ```
 
 ## License
