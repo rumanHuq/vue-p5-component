@@ -168,8 +168,11 @@ NOTE:
 
 <script lang="ts">
 import Vue from "vue";
-import P5,
-{ P5Element, P5Sketch } from "vue-p5-component";
+import
+  P5,
+  {
+    P5Element, P5Sketch // this are the type definitions
+  } from "vue-p5-component";
 
 export default Vue.extend({
   components: { P5 },
