@@ -1,8 +1,21 @@
 // @ts-ignore
 import Vue from "vue";
 import { VIDEO, AUDIO } from "p5";
+
+/* declare module 'vue/types/options' {
+  interface ComponentOptions<V extends Vue> extends P5Setup {
+    myOption?: string
+  }
+} */
 declare module "vue-p5-component" {
   export type Isketch = P5 & P5DOM & P5SOUND & P5GLOBAL;
+}
+
+interface P5Setup {
+  methods?: {
+    draw?: any;
+    setup?: any;
+  }
 }
 
 interface P5GLOBAL {
