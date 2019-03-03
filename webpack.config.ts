@@ -28,7 +28,6 @@ const config:Configuration = {
       },
     ],
   },
-  externals: { p5: "p5" },
   plugins: [
     new VueLoaderPlugin(),
     new CopyPlugin([
