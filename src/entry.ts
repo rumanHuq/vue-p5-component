@@ -1,23 +1,21 @@
 // Import vue component
-import component from './p5-component.vue';
+import component from "./p5-component.vue";
 // install function executed by Vue.use()
 function install(Vue: any) {
   if ((install as any).installed) return;
   (install as any).installed = true;
-  Vue.component('VueP5Component', component);
+  Vue.component("VueP5Component", component);
 }
 
 // Create module definition for Vue.use()
-const plugin = {
-  install,
-};
+const plugin = { install };
 
 // To auto-install when vue is found
 /* global window global */
 let GlobalVue = null;
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   GlobalVue = (window as any).Vue;
-} else if (typeof global !== 'undefined') {
+} else if (typeof global !== "undefined") {
   GlobalVue = (global as any).Vue;
 }
 if (GlobalVue) {
