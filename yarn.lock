@@ -676,11 +676,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.15.tgz#699afb07a91adced2d6183a0ad156bf82542fc7d"
   integrity sha512-x6ypl5Uzly+j23hbxmMzf12Eb4lOhIEqQz0HuczpTUa1KIx1GpbN/o4E3aAED20UoEsdK0wvyY8QcffuWSLDkw==
 
-"@types/p5@^0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@types/p5/-/p5-0.7.2.tgz#783601010d66a2039a7e40ec5388737611c0c85f"
-  integrity sha512-RZP5vE2HoPYP3TOCNpAK883z/0wNAgZ2svuk8o5eZ3aEREm2qaYYQW/w0373CjcmtEtYdGaeLqOgU7AaozGnNA==
-
 "@types/tapable@*":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.4.tgz#b4ffc7dc97b498c969b360a41eee247f82616370"
